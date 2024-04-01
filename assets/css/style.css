@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-padrao:#8506c0;
+    --cor-padrao-hover: #0E0236;
+    --cor-fonte: #fff;
+    --cor-menu-mobile: #ebe8e8;
+    --cor-background-categ: #d404b88c;;
+    --cor-btn: #a80492;
+    --cor-btn-titulo: #000;
+    --cor-header-fixo:#9608d8ee;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cor-menu-mobile);
+    
+}
+
+
+
+ul a {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul a:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.logo img{
+    width: 190px;
+    margin-top: 20px;
+   
+}
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: var(--cor-header-fixo);
+    z-index: 1000;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .9rem;
+}
+
+#menu a {
+    display: block;
+    padding: 1rem;
+}
+
+#btn-mobile {
+width: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+}
+
+#btn-mobile {
+    display: none;
+}
+
+
+
+/*-------------------INICIO DA CATEGORIA--------------------------------------*/
+.categorias {
+    margin: 70px 0;
+    
+}
+
+.titulo-categoria {
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 80px;
+    text-align: center;
+    color: var(--cor-fonte-corpo);
+    text-transform: uppercase;
+}
+
+.titulo-categoria::after {
+    content: '';
+    background-color: var(--cor-padrao);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+.categoria h2  {
+    margin-top: 20px;
+}
+
+.corpo-categorias {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+}
+
+.corpo-categorias .linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    width: 100px;
+    gap: 50px;
+    
+}
+
+.col-3 {
+    flex-basis: 10%;
+    margin-top: 0px;
+    height: 100px;
+    transition: transform 0.5s;
+}
+
+
+.col-3 img {
+  
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    background: var(--cor-background-categ);
+ 
+}
+
+
+.corpo-categorias .col-3 p {
+    font-size: 15px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-family: 'Poppins';
+}
+
+.banner-anuncio {
+    display: flex;
+    margin-top: 60px;
+    width: 50%;
+   
+}
+/*-------------------FIM DA CATEGORIA--------------------------------------*/
+
+
+/*-------------------INICIO PRODUTO EM DESTAQUE--------------------------------------*/
+.titulo-destaque {
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 80px;
+    text-align: center;
+    color: var(--cor-fonte-corpo);
+    text-transform: uppercase;
+}
+
+.categorias-destaque h2 span {
+    color: var(--cor-btn);
+}
+
+.linha-categoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+
+.titulo::after {
+    content: '';
+    background-color: var(--cor-padrao);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+    color: var(--cor-fonte-corpo);
+    font-weight: normal;
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+
+.col-4 {
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+   
+}
+
+.col-4:hover {
+    transform: scale(1.1);
+}
+
+.col-4 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+/*-------------------FIM PRODUTO EM DESTAQUE--------------------------------------*/
+
+
+
+/*-------------------INICIO OFERTAS--------------------------------------*/
+.ofertas {
+    background: radial-gradient(var(--cor-padrao), var(--cor-background-categ));
+    margin-top: 80px;
+    padding: 30px 0;
+    
+    
+}
+
+.col-5 img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+   
+}
+
+small {
+    color: var(--cor-fonte);
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background: var(--cor-btn);
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: var(--cor-btn-hover);
+    color: var(--cor-btn-fonte);
+}
+
+/*-------------------FIM OFERTAS--------------------------------------*/
+
+
+
+/*--------Inicio das formas de Pagamento-------------------*/
+#countdown {
+    display: flex; /* Permite que o contador fique ao lado do h2 */
+    vertical-align: middle; /* Alinha verticalmente com o h2 */
+    font-size: 2rem;
+    justify-content: space-around;
+    background: var(--cor-fonte);
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+
+.titulo-e-countdown {
+    display: flex; /* Para alinhar o h2 e o contador lado a lado */
+    justify-content: space-between; /* Alinha os elementos na mesma linha com espaço entre eles */
+    align-items: center; /* Alinha verticalmente */
+}
+
+
+.categorias-destaque.relampago  {   
+    background-image: linear-gradient(to top, var(--cor-fonte), var(--cor-header-fixo));
+    
+}
+
+
+.categorias-destaque.relampago h2 {
+    margin-bottom: 0px;
+    padding-right: 50rem;
+}
+.titulo-destaque.relampago span{
+    color: var(--cor-fonte);
+    margin-right: 20px; /* Adiciona margem à direita do h2 para separação */
+   
+}
+
+
+/*---------Fim das formas de Pagamento--------------*/
+
+
+
+.rodape {
+    background: var(--cor-padrao-hover);
+}
+
+.rodape .rodape-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    padding: 2rem 8rem;
+}
+
+.rodape-linha .rodape-col img {
+    width: 200px;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.rodape-linha .rodape-col p {
+    font-size: 1rem;
+    color: var(--cor-fonte);
+    margin-bottom: 1rem;
+}
+
+.rodape-linha .rodape-col span {
+    font-size: 0.9rem;
+    color: var(--cor-fonte);
+    display: block;
+}
+
+.rodape-linha .rodape-col span i {
+    font-size: 13px;
+    background-color: var(--cor-header-fixo);
+    padding: 0.1rem;
+    border-radius: 10px;
+}
+
+.rodape-linha .rodape-col h5 {
+    font-size: 1.2rem;
+    position: relative;
+    color: var(--cor-fonte);
+    letter-spacing: 1px;
+    padding: 0.1rem;
+    margin: 0.4rem 0;
+}
+
+.rodape-linha .rodape-col h5::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--cor-fonte);
+}
+
+.rodape-linha .rodape-col h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    width: 40px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--cor-btn);
+}
+
+.rodape-linha .rodape-col a {
+    display: block;
+    font-size: 1rem;
+    color: var(--cor-fonte);
+    padding-top: 0.5rem;
+    transition: 0.4s ease;
+}
+
+.rodape-linha .rodape-col a:hover {
+    color: var(--cor-background-categ);
+    padding-left: 5px;
+}
+
+.rodape-linha .rodape-col input {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    color: var(--cor-escura);
+    padding-left: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.rodape-linha .rodape-col button {
+    width: 100%;
+    background-color: var(--cor-btn);
+    font-size: 1rem;
+    color: var(--cor-fonte);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: 0.4s ease;
+    border-radius: 5px;
+}
+
+.rodape-linha .rodape-col button:hover {
+    background-color: var(--cor-padrao);
+    border: 1px solid var(--cor-branca);
+}
+
+.rodape .rodape-direitos  {
+    background-color: var(--cor-header-fixo);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem 10rem;
+}
+
+.rodape .rodape-direitos p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--cor-fonte);
+    letter-spacing: 1px;
+}
+
+.rodape .rodape-direitos p span{
+    color: var(--cor-fonte);
+}
+
+.rodape .rodape-direitos .rodape-redes i {
+    font-size: 1.4rem;
+    color: var(--cor-fonte);
+    background-color: var(--cor-header-fixo);
+    margin-left: 20px;
+    padding: 0.4rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.4s ease;
+
+}
+
+.rodape .rodape-direitos .rodape-redes i:hover {
+    transform: scale(1.1);
+}
+/*-------------------Fim do Rodapé do Site----------------*/
+
+
+
+/*-----------------Inicio do Formulário de Cadastro----------------*/
+.cadastro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor-background-categ);
+    margin: auto;
+    width: 90%;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.cad {
+    width: 80%;
+}
+
+.cad h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+
+#cadastro input[type="text"], input[type="email"], input[type="password"] {
+    width: 400px;
+    height: 50px;
+    color: var(--cor-principal);
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 1%;
+}
+
+#cadastro input[type="radio"] {
+    margin-right: 1%;
+}
+
+
+
+#cadastro input[type="submit"] {
+    width: 200px;
+    height: 50px;
+    padding: 1%;
+    background-color: var(--cor-header-fixo);
+    color: var(--cor-fonte);
+    border: none;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+#cadastro input[type="submit"]:hover {
+    background-color: var(--cor-padrao);
+    cursor: pointer;
+}
+
+.cad img {
+    width: 100%;
+    height: 82%;
+    margin: -1%;
+}
+/*-----------------Fim do Formulário de Cadastro----------------*/
+
+
+/*-----------------Inicio do Formulário de Login----------------*/
+.login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor-background-categ);
+    margin: auto;
+    width: 90%;
+    border-radius: 10px 10px 0 0;
+}
+
+.logar {
+    width: 80%;
+}
+
+#logar1 {
+    width: 95%;
+}
+
+.logar h1 {
+    font-size: 2.1rem;
+    text-align: center;
+    color: var(--cor-btn-titulo);
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+.logar input[type="submit"] {
+    width: 250px;
+    height: 50px;
+    background-color: var(--cor-header-fixo);
+    color: var(--cor-fonte);
+    border: none;
+    margin-top: 3%;
+    border-radius: 10px;
+
+}
+
+.logar input[type="submit"]:hover {
+    background-color: var(--cor-btn);
+    cursor: pointer;
+}
+
+.logar img {
+    margin-left: -90px;
+    width: 95%;
+    margin-bottom: -5px;
+    
+}
+
+/*-----------------Fim do Formulário de Login----------------*/
+
+
+
+/*-----------------Inicio Sessão do Usuário----------------*/
+.barra_top {
+    display: flex;
+    position: relative;
+    top: 80px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-padrao-hover);
+    width: 95%;
+    padding: 1% 5%;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.barra h1 {
+    color: var(--cor-fonte);
+    font-size: 1rem;
+}
+
+.barra a {
+    color: var(--cor-fonte);
+}
+
+.usuario {
+    width: 95%;
+    height: 25rem;
+    background-color: var(--cor-btn);
+    margin: 3% auto; 
+    padding: 2%;
+    text-align: center;
+}
+
+.usuario h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-fonte);
+}
+
+.usuario p {
+    color: var(--cor-padrao-hover);
+}
+/*-----------------Fim Sessão do Usuário----------------*/
+
+
+/*-----------------Inicio sessão do Contato----------------*/
+.contato {
+    display: flex;
+    position: relative;
+    top: 80px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-background-categ);
+    width: 95%;
+    height: 855px;
+    padding: 1% 5%;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 80px;
+}
+
+.cont {
+    width: 80%;
+}
+
+.cont h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--cor-fonte);
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+.cont form {
+    text-align: center;
+}
+
+.cont input[type="text"], input[type="email"], input[type="tel"] {
+    width: 400px;
+    height: 35px;
+    color: var(--cor-fonte);
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 1%;
+}
+
+.cont textarea{
+    width: 400px;
+    height: 200px;
+    color: var(--cor-padrao-hover);
+    text-align: center;
+    padding-top: 1%;
+    border-radius: 10px;
+    border: none;
+}
+
+.cont input[type="submit"] {
+    width: 250px;
+    height: 50px;
+    padding: 1%;
+    background-color: var(--cor-btn);
+    color: var(--cor-fonte);
+    border: none;
+    margin-top: 3%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cont input[type="submit"]:hover {
+    background-color: var(--cor-header-fixo);
+}
+
+.cont img {
+   margin-bottom: 4%;
+}
+/*-----------------Fim sessão do Contato----------------*/
+
+
+
+
+
+
+
+
+

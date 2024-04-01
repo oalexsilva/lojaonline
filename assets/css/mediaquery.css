@@ -1,0 +1,337 @@
+@media only screen and (max-width:1500px) {
+.hamburguer { /* Alteração necessária */
+    display: none;
+   
+}
+
+}
+
+
+@media only screen and (max-width:1183px) {
+    #countdown {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width:1135px) {
+    .titulo-e-countdown {
+        display: flex;
+    }
+
+    #countdown {
+        display: flex;
+        width: 20%;
+    }
+
+    .categorias-destaque.relampago h2 {
+        display: flex;
+        font-size: 1.4rem;
+        margin: 0.4rem;
+        width: 10%;
+        
+    }
+
+}
+
+
+
+@media only screen and (max-width:1027px) {
+    .ofertas {
+        width: auto;
+        height: 100%;
+    }
+       
+}
+
+@media only screen and (max-width:995px) {
+    .ofertas {
+        width: auto;
+        height: 100%;
+    }
+
+    .rodape .rodape-linha {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .linha-categoria.ofertas  {
+       grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+       
+}
+
+
+@media only screen and (max-width:969px) {
+    .titulo-e-countdown {
+        display: flex;
+    }
+
+    #countdown {
+        display: flex;
+        width: 60%;
+    }
+
+    .categorias-destaque.relampago h2 {
+        display: flex;
+        font-size: 1.4rem;
+        margin: 0.4rem;
+        width: 10%;
+        
+    }
+       
+}
+
+@media only screen and (max-width:957px) {
+    .linha-categoria.destaque {
+        grid-template-columns: 1fr 1fr 1fr  1fr;
+    }
+    
+    .titulo-e-countdown {
+        display: flex;
+    }
+
+    #countdown {
+        display: flex;
+        width: 40%;
+    }
+
+    .linha-categoria.ofertas h2 {
+        display: flex;
+        
+    }
+       
+}
+
+@media only screen and (max-width:937px) {
+    .linha-categoria.destaque {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+
+    #countdown {
+        width: 80%;
+    }
+
+    .titulo-destaque.relampago {
+        width: 30%;
+    }
+
+    .linha-categoria.ofertas {
+       grid-template-columns: 1fr 1fr 1fr;
+     
+    }
+ 
+       
+}
+
+
+
+
+@media only screen and (max-width:902px) {
+    .ofertas {
+        width: auto;
+        height: 100%;
+    }
+       
+}
+
+
+@media only screen and (max-width:839px) {
+    nav ul {
+        display: flex; /* Use flexbox para os itens do menu */
+        flex-direction: row; /* Garanta que os itens do menu estejam em linha */
+        justify-content: center; /* Centralize os itens do menu */
+    }
+
+    nav ul li {
+        margin-right: 15px; /* Adicione um espaço entre os itens do menu */
+    }
+
+    .ofertas {
+        width: auto;
+        height: 100%;
+    }
+   
+
+}  
+
+
+
+@media only screen and (max-width:745px) {
+    nav ul {
+        display: flex; /* Use flexbox para os itens do menu */
+        flex-direction: row; /* Garanta que os itens do menu estejam em linha */
+        justify-content: center; /* Centralize os itens do menu */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Adicione um espaço entre os itens do menu */
+    }
+   
+
+}  
+
+
+
+@media only screen and (max-width: 713px) {
+       
+
+       #menu {
+        display: block;
+        position: absolute;
+        width: 40%;
+        top: 70px;
+        right: 0;
+        background: var(--cor-menu-mobile);
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+       }
+
+       #nav.active #menu {
+        height: calc(50vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+
+       }
+
+       #menu a {
+        color: white;
+       padding: 1rem 0;
+       margin: 0 1rem;
+       border-bottom: 2px solid #b3b0b0 ;
+       }
+
+       #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+       }
+       #hamburguer {
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+
+       }
+
+       #hamburguer::after,  #hamburguer::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        position: relative;
+       }
+
+       #nav.active  #hamburguer {
+        border-top-color: transparent;
+       }
+
+       #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+       }
+
+       #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+       }
+
+       
+
+       .corpo-categorias .linha {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        width: 100px;
+        height: 100px;
+        gap: 30px;
+        
+    }
+
+    .corpo-categorias .col-3 p {
+        margin-top: -10px;
+    }
+
+    
+    .linha {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .categorias .titulo-categoria {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .categorias-destaque .titulo-destaque {
+        margin-top: 500px;
+        margin-bottom: 0;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 702px) {
+    .corpo-categorias .linha {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        width: 100px;
+        height: 100px;
+        gap: 30px;
+        
+    }
+}
+
+
+@media only screen and (max-width: 521px) {
+    .corpo-categorias .linha {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        width: 100px;
+        height: 100px;
+        gap: 20px;
+        
+    }
+
+    .col-3 img {
+        margin-top: 40px;
+        width: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+        
+    }
+
+}
+
+
+@media only screen and (max-width: 390px) {
+
+    .linha-categoria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .categorias .titulo-categoria {
+        margin-top: -30px;
+        margin-bottom: 0px;
+        margin: 0;
+    }
+
+    .rodape .rodape-linha {
+        grid-template-columns: 1fr;
+    }
+
+}
